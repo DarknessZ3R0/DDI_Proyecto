@@ -5,9 +5,11 @@ using UnityEngine;
 public class key : MonoBehaviour {
     private bool isPlayerInside = false;
     public GameObject llave;
+    //public GameObject cabezas;
     // Use this for initialization
     void Start () {
         llave.SetActive(true);
+      //  cabezas.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -16,8 +18,10 @@ public class key : MonoBehaviour {
         {
             llave.SetActive(false);
             GameObject.Find("ElJugador").GetComponent<Inventario>().iKey += 1;
+           // cabezas.SetActive(true);
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
 

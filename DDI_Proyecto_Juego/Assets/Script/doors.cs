@@ -7,10 +7,12 @@ public class doors : MonoBehaviour {
 	private bool isPlayerInside = false;
 	public GameObject puerta;
     private int numLlaves = 0;
+	public GameObject panelLlaves;
 
     // Use this for initialization
     void Start () {
 		puerta.SetActive(true);
+		panelLlaves.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -28,7 +30,11 @@ public class doors : MonoBehaviour {
         
         if (other.CompareTag("Player"))
         {
-            isPlayerInside = true;   
+            isPlayerInside = true;
+			if(this.numLlaves != keys){
+				panelLlaves.SetActive(true);   
+			}
+			
         }
         
     }
@@ -37,6 +43,7 @@ public class doors : MonoBehaviour {
 		if (other.CompareTag("Player")) 
 		{
 			isPlayerInside = false;
+			panelLlaves.SetActive(false);
 		}
 	}
 }

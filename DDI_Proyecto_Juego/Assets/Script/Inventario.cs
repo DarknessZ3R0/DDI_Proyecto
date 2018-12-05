@@ -5,6 +5,7 @@ using UnityEngine;
 public class Inventario : MonoBehaviour {
 
 	public int iKey=0;
+	public int GoldKey=0;
     
 	void Start () {
 		
@@ -15,10 +16,5 @@ public class Inventario : MonoBehaviour {
 	void Update () {
 		
 	}
-	/*public int GetiKey(){
-		return iKey;
-	}
-	public void SetiKey(int key){
-		this.iKey=key;
-	}*/
+	
 }
