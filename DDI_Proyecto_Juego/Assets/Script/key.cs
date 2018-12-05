@@ -5,20 +5,29 @@ using UnityEngine;
 public class key : MonoBehaviour {
     private bool isPlayerInside = false;
     public GameObject llave;
-    //public GameObject cabezas;
-    // Use this for initialization
+    private AudioSource sonido_Llaves;
+  
+    
+
     void Start () {
         llave.SetActive(true);
-      //  cabezas.SetActive(false);
+        sonido_Llaves = GetComponent<AudioSource>();
+        
 	}
 	
-	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.E) && isPlayerInside)
         {
             llave.SetActive(false);
             GameObject.Find("ElJugador").GetComponent<Inventario>().iKey += 1;
-           // cabezas.SetActive(true);
+            
+            if(llave.activeInHierarchy)
+            {
+			    sonido_Llaves.Stop();
+		    }else
+            {
+			    sonido_Llaves.Play(); 	
+		    }
         }
     }
 

@@ -16,7 +16,7 @@ public class GoldenKey : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E) && isPlayerInside)
         {
             llaveDorada.SetActive(false);
-            GameObject.Find("ElJugador").GetComponent<Inventario>().GoldKey += 1;
+            GameObject.Find("ElJugador").GetComponent<Inventario>().MasterKey += 1;
         }
     }
     private void OnTriggerEnter(Collider other)

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventario : MonoBehaviour {
 
 	public int iKey=0;
-	public int GoldKey=0;
+	public int MasterKey=0;
     
 	void Start () {
 		
