@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class ContadorLlaves : MonoBehaviour {
 	private int cLlaves = 0;
+	
 	public Text textollaves;
-	// Use this for initialization
+	
 	void Start () {
 		
 
@@ -14,7 +15,9 @@ public class ContadorLlaves : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		cLlaves=GameObject.Find("ElJugador").GetComponent<Inventario>().iKey;
+	
 		textollaves.text = "Llaves: " + cLlaves;
 	}
 }

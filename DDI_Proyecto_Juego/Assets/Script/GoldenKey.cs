@@ -6,12 +6,9 @@ public class GoldenKey : MonoBehaviour {
 
     private bool isPlayerInside = false;
     public GameObject llaveDorada;
-    // Use this for initialization
     void Start () {
-        llaveDorada.SetActive(true);
+        llaveDorada.SetActive(false);
 	}
-	
-	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.E) && isPlayerInside)
         {
@@ -21,13 +18,10 @@ public class GoldenKey : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.CompareTag("Player"))
         {
             isPlayerInside = true;
-
         }
-
     }
     void OnTriggerExit(Collider other)
     {
