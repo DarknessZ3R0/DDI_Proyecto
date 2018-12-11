@@ -11,7 +11,7 @@ public class key : MonoBehaviour {
 
     void Start () {
         llave.SetActive(true);
-        sonido_Llaves = GetComponent<AudioSource>();
+        sonido_Llaves = GetComponent<AudioSource>();//sonidos
         
 	}
 	

@@ -11,10 +11,7 @@ public class Sonidos : MonoBehaviour {
 	 private int aleatorio=0;
 	 
 	void Start () {
-		//AdudioA = GameObject.GetComponent<AudioSource>();
-		//AdudioB = GameObject.GetComponent<AudioSource>();
-		//AdudioC = GameObject.GetComponent<AudioSource>();
-		//AdudioD = GameObject.GetComponent<AudioSource>();
+	
 	}
 	
 	// Update is called once per frame

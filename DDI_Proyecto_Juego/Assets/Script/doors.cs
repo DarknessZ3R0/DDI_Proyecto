@@ -12,6 +12,7 @@ public class doors : MonoBehaviour {
 	public GameObject panelFaltantes;
 	private int resultado;
 	public Text faltantes;
+
 	
 
     // Use this for initialization
@@ -19,6 +20,7 @@ public class doors : MonoBehaviour {
 		puerta.SetActive(true);
 		panelLlaves.SetActive(false);
 		panelFaltantes.SetActive(false);
+
 	}
 	
 	// Update is called once per frame
@@ -28,7 +30,7 @@ public class doors : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E) && isPlayerInside && llavesInventario>=keys)
         {
            		 puerta.SetActive(false);
-
+				
         }
       
 	}
