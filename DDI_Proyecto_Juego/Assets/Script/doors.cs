@@ -25,8 +25,8 @@ public class doors : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-		llavesInventario=GameObject.Find("ElJugador").GetComponent<Inventario>().iKey;
+        llavesInventario=GameObject.Find("ElJugador").GetComponent<Inventario>().iKey;
+		
         if (Input.GetKeyDown(KeyCode.E) && isPlayerInside && llavesInventario>=keys)
         {
            		 puerta.SetActive(false);
@@ -36,7 +36,7 @@ public class doors : MonoBehaviour {
 	}
 	 private void OnTriggerEnter(Collider other)
     {
-        
+		
         if (other.CompareTag("Player"))
         {
 			

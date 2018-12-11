@@ -3,26 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class sonido_general : MonoBehaviour {
-
-	 public GameObject objeto;
+    private bool isplayerinside = false;
+	
     private AudioSource sonido_g;
     
 
     void Start () {
-       sonido_g = GetComponent<AudioSource>();//sonidos
-        
+        sonido_g = GetComponent<AudioSource>();//sonidos
+        sonido_g.Stop();
 	}
 	
 	void Update () {
-            if(objeto.activeInHierarchy)
-            {
-			    sonido_g.Stop();
-		    }else
-            {
-			    sonido_g.Play(); 	
+            if(isplayerinside)
+            {   
+                
+			    sonido_g.Play();
 		    }
-        
     }
+    private void OnTriggerEnter(Collider other)
+    {
+
+        if (other.CompareTag("Player"))
+        {
+            
+            isplayerinside = true;
+
+        }
+
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            
+            isplayerinside = false;
+        }
+    }
+    
 
 }
 

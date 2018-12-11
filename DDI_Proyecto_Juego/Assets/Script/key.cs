@@ -36,7 +36,7 @@ public class key : MonoBehaviour {
 
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Se encontro jugador");
+            
             isPlayerInside = true;
 
         }
@@ -46,7 +46,7 @@ public class key : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Jugador salio");
+          
             isPlayerInside = false;
         }
     }

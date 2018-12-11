@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Sonidos : MonoBehaviour {
-	 private bool isPlayerInside = false;
+	 private bool playerinsisde=false;
 	 public GameObject AdudioA;
 	 public GameObject AdudioB;
 	 public GameObject AdudioC;
@@ -16,7 +16,20 @@ public class Sonidos : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		switch(aleatorio){
+		
+
+		}
+		
+	
+	private void OnTriggerEnter(Collider other)
+    {
+		
+		
+        if (other.CompareTag("Player"))
+        {
+			
+			aleatorio = Random.Range(1,4);
+			switch(aleatorio){
 			case 1:	
 						AdudioA.GetComponent<AudioSource>().Play();
 					
@@ -35,32 +48,19 @@ public class Sonidos : MonoBehaviour {
 						AdudioD.GetComponent<AudioSource>().Play();
 						
 					break;
-
-		}
-		
-	}
-	private void OnTriggerEnter(Collider other)
-    {
-		
-		
-        if (other.CompareTag("Player"))
-        {
-			
-			aleatorio = Random.Range(1,4);
-			Debug.Log("Entro Numero: "+aleatorio);
-            isPlayerInside = true;
         }
+		}
 
     }
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-			Debug.Log("Salio");
-            isPlayerInside = false;
+	
+           
 		
         }
 	}
 
-	
-}
+}	
+

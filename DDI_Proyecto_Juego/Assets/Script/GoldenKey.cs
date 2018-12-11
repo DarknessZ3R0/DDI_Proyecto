@@ -5,14 +5,15 @@ using UnityEngine;
 public class GoldenKey : MonoBehaviour {
 
     private bool isPlayerInside = false;
-    public GameObject llaveDorada;
+    
+    private bool llavetomada=false;
     void Start () {
-        llaveDorada.SetActive(false);
+        
 	}
 	void Update () {
+
         if (Input.GetKeyDown(KeyCode.E) && isPlayerInside)
-        {
-            llaveDorada.SetActive(false);
+        {         
             GameObject.Find("ElJugador").GetComponent<Inventario>().MasterKey += 1;
         }
     }
