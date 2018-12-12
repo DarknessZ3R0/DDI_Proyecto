@@ -6,28 +6,25 @@ public class key : MonoBehaviour {
     private bool isPlayerInside = false;
     public GameObject llave;
     private AudioSource sonido_Llaves;
+    private bool activa=true;
   
     
 
     void Start () {
         llave.SetActive(true);
         sonido_Llaves = GetComponent<AudioSource>();//sonidos
+        sonido_Llaves.Stop();
         
 	}
 	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerInside)
+        if (Input.GetKeyDown(KeyCode.E) && isPlayerInside && activa==true)
         {
             llave.SetActive(false);
             GameObject.Find("ElJugador").GetComponent<Inventario>().iKey += 1;
             
-            if(llave.activeInHierarchy)
-            {
-			    sonido_Llaves.Stop();
-		    }else
-            {
-			    sonido_Llaves.Play(); 	
-		    }
+			sonido_Llaves.Play(); 	
+		    activa=false;
         }
     }
 

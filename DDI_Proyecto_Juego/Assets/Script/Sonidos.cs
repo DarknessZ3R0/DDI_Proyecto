@@ -56,7 +56,9 @@ public class Sonidos : MonoBehaviour {
     {
         if (other.CompareTag("Player"))
         {
-	
+			AdudioA.GetComponent<AudioSource>().Stop();
+			AdudioB.GetComponent<AudioSource>().Stop();
+			AdudioD.GetComponent<AudioSource>().Stop();
            
 		
         }

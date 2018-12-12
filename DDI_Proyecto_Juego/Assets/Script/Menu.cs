@@ -26,7 +26,7 @@ public class Menu : MonoBehaviour {
 			Time.timeScale=0;
 		else 
 			Time.timeScale=1;
-		SceneManager.LoadScene(0);
+		//SceneManager.LoadScene(0);
 		
 		if (Input.GetKeyDown(KeyCode.R)){
 			Debug.Log("si funciona wey");

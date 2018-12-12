@@ -23,7 +23,7 @@ void Start () {
 
     private void LoadMapaCasa()
     {
-        Application.LoadLevel("mapa-casa");
+        Application.LoadLevel("Mapa-casa");
     }
 	 private void OnTriggerEnter(Collider other)
     {

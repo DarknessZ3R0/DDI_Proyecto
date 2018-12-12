@@ -5,30 +5,20 @@ using UnityEngine;
 public class GoldenKey : MonoBehaviour {
 
     private bool isPlayerInside = false;
+    private bool activa = false;
     
     private bool llavetomada=false;
+    
     void Start () {
         
 	}
 	void Update () {
-
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerInside)
-        {         
+        
+        if (Input.GetKeyDown(KeyCode.E) && isPlayerInside && GameObject.Find("Master_key").GetComponent<ApareceLLave>().activador == true)
+        {   
             GameObject.Find("ElJugador").GetComponent<Inventario>().MasterKey += 1;
+            activa = false;
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInside = true;
-        }
-    }
-    void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isPlayerInside = false;
-        }
-    }
+    
 }

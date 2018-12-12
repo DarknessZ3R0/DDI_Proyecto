@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class sonido_general : MonoBehaviour {
     private bool isplayerinside = false;
-	
+	private bool activo = true;
     private AudioSource sonido_g;
     
 
@@ -14,9 +14,9 @@ public class sonido_general : MonoBehaviour {
 	}
 	
 	void Update () {
-            if(isplayerinside)
+            if(isplayerinside && activo == true)
             {   
-                
+                activo = false;
 			    sonido_g.Play();
 		    }
     }
