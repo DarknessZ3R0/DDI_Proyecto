@@ -18,9 +18,21 @@ void Start () {
            	LoadMapaCasa();	 
 
         }
+		
+		if (Input.GetKeyDown(KeyCode.B) && isPlayerInside)
+        {
+           	LoadSotano();	 
+
+        }
       
 	}
 
+	 private void LoadSotano()
+    {
+        Application.LoadLevel("Sotano");
+    }
+	
+	
     private void LoadMapaCasa()
     {
         Application.LoadLevel("Mapa-casa");
