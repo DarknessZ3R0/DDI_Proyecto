@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChangingLevel : MonoBehaviour
 {
     private bool isPlayerInside = false;
+    public string nivel;
 void Start () {
 	
 	}
@@ -15,28 +16,21 @@ void Start () {
 		
         if (Input.GetKeyDown(KeyCode.E) && isPlayerInside)
         {
-           	LoadMapaCasa();	 
+           	LoadMapa();	 
 
         }
 		
-		if (Input.GetKeyDown(KeyCode.B) && isPlayerInside)
-        {
-           	LoadSotano();	 
-
-        }
+		
       
 	}
 
-	 private void LoadSotano()
+	 private void LoadMapa()
     {
-        Application.LoadLevel("Sotano");
+        Application.LoadLevel(nivel);
     }
 	
 	
-    private void LoadMapaCasa()
-    {
-        Application.LoadLevel("Mapa-casa");
-    }
+    
 	 private void OnTriggerEnter(Collider other)
     {
         
