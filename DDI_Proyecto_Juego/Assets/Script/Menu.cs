@@ -18,7 +18,7 @@ public class Menu : MonoBehaviour {
 	void Update () {
 		
 //falta congelar la imagen 
-		if (Input.GetKeyDown(KeyCode.P)){
+		if (Input.GetButtonDown("Start")){
 			paused=!paused; 
 			Panel.SetActive(paused);
 		}
@@ -28,8 +28,8 @@ public class Menu : MonoBehaviour {
 			Time.timeScale=1;
 		//SceneManager.LoadScene(0);
 		
-		if (Input.GetKeyDown(KeyCode.R)){
-			Debug.Log("si funciona wey");
+		if (Input.GetButtonDown("Reset")){
+			
 			 Application.LoadLevel("Mapa_pricipal");
 			 //quitar las llaves que tenias
 		}
