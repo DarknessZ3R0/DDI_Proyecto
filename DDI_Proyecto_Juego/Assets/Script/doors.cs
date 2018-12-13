@@ -27,7 +27,7 @@ public class doors : MonoBehaviour {
 	void Update () {
         llavesInventario=GameObject.Find("ElJugador").GetComponent<Inventario>().iKey;
 		
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerInside && llavesInventario>=keys)
+        if (Input.GetButtonDown("InteractuarX") && isPlayerInside && llavesInventario>=keys)
         {
            		 puerta.SetActive(false);
 				

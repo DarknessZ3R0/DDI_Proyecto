@@ -28,7 +28,7 @@ public class ApareceLLave : MonoBehaviour {
 			llaveDorada.SetActive(false);
 			activador=false;
 		}
-		 if (Input.GetKeyDown(KeyCode.E) && isPlayerInside && activador==true)
+		 if (Input.GetButtonDown("InteractuarX") && isPlayerInside && activador==true)
         {
             llaveDorada.SetActive(false);
             GameObject.Find("ElJugador").GetComponent<Inventario>().MasterKey += 1;

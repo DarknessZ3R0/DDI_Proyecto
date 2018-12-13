@@ -14,7 +14,7 @@ void Start () {
 	void Update () {
         
 		
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerInside)
+        if (Input.GetButtonDown("InteractuarX") && isPlayerInside)
         {
            	LoadMapa();	 
 

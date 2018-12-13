@@ -18,7 +18,7 @@ public class key : MonoBehaviour {
 	}
 	
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerInside && activa==true)
+        if (Input.GetButtonDown("InteractuarX") && isPlayerInside && activa==true)
         {
             llave.SetActive(false);
             GameObject.Find("ElJugador").GetComponent<Inventario>().iKey += 1;

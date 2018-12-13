@@ -14,7 +14,7 @@ public class FinalDoor : MonoBehaviour {
 	}
 	void Update () {
         User_Keys=GameObject.Find("ElJugador").GetComponent<Inventario>().MasterKey;
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerInside && User_Keys==Master_Key_Required)
+        if (Input.GetButtonDown("InteractuarX") && isPlayerInside && User_Keys==Master_Key_Required)
         {
            		 door.SetActive(false);
 
